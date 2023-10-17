@@ -9,6 +9,6 @@ public interface IValores {
     double descInfantil = 0.05;
     double descDeporte = 0.1;
     
-    public void totalImpuesto(int totalSinImpuesto,String categoria);
+    public void totalImpuesto(int totalSinImpuesto,Libro librito);
     public void calculaDesc(Libro libro, String categoria);
 }

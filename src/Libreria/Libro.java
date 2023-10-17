@@ -58,10 +58,19 @@ public abstract class Libro implements IValores {
     }
 
     @Override
-    public void totalImpuesto(int totalSinImpuesto, String categoria) {
-        if(categoria.equalsIgnoreCase(this.getCategoria())){
-            
+    public void totalImpuesto(int totalSinImpuesto, Libro librito) {
+        double totalDeporte = 0;
+        double totalInfantil = 0;
+        double totalAmbos = 0;
+        for (Libro libro : libros.libros) {
+            if (libro.getCategoria().equalsIgnoreCase("deporte")){
+                totalDeporte = totalDeporte + (libro.getPrecio()*iva) - (libro.getPrecio()*descDeporte);
+            }else if (libro.getCategoria().equalsIgnoreCase("infantil")){
+                totalInfantil = totalInfantil + (libro.getPrecio()*iva) - (libro.getPrecio()*descInfantil);
+            }
         }
+        totalAmbos = totalDeporte+totalInfantil;
+        System.out.println("El total de la compra es $ "+totalAmbos);
     }
 
     @Override

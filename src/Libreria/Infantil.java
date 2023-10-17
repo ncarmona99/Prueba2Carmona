@@ -31,6 +31,11 @@ public class Infantil extends Libro {
     public String toString() {
         return "Infantil{" + "rangoEdad=" + rangoEdad + '}' + " " + super.toString();
     }
+
+    @Override
+    public void totalImpuesto(int totalSinImpuesto, Libro librito) {
+        super.totalImpuesto(totalSinImpuesto, librito);
+    }
     
     
 }

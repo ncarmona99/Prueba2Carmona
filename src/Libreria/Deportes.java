@@ -31,6 +31,11 @@ public class Deportes extends Libro {
     public String toString() {
         return "Deportes{" + "tipoDeporte=" + tipoDeporte + '}' + " " + super.toString();
     }
+
+    @Override
+    public void totalImpuesto(int totalSinImpuesto, Libro librito) {
+        super.totalImpuesto(totalSinImpuesto, librito);
+    }
     
     
 }
